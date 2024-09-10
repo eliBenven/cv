@@ -61,6 +61,22 @@
             color: #333;
             line-height: 1.6;
         }
+        .navbar {
+            background-color: #007acc;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background-color: #005a99;
+            color: white;
+        }
         .container {
             max-width: 800px;
             margin: 30px auto;
@@ -145,9 +161,36 @@
         footer a:hover {
             text-decoration: underline;
         }
+        .contact-form {
+            margin-top: 40px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #005a99;
+        }
     </style>
 </head>
 <body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="#">Resumé</a>
+    <a href="#contact">Contact</a>
+</div>
 
 <div class="container">
     <div class="headshotContainer">
@@ -227,13 +270,19 @@
             <li>UGA Chess Club</li>
         </ul>
     </div>
-</div>
 
-<footer>
-    <p>
-        <a href="https://benven.org">Resumé</a>
-    </p>
-</footer>
+    <!-- Contact Form Section -->
+    <div id="contact" class="section contact-form">
+        <h2>Contact Me</h2>
+        <form action="" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="_replyto" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    
+</div>
 
 </body>
 </html>
